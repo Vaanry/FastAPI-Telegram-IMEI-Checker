@@ -12,16 +12,31 @@
     ```
 
 3. Настройте переменные окружения в `.env` файле.
+    ```env
+    APP_TITLE = Your store title
+    DATABASE_URL = Your database url
+    SECRET_KEY = Your secret key for jwt
+    ALGORITHM = Your algorithm for jwt
+    TOKEN = Your telegram token
+    API_KEY = Токен API Live for IMEI checker service
+    ```
+4. Запустите миграции базы данных с помощью Alembic:
 
-4. Запустите FastAPI-приложение:
+    ```bash
+    alembic upgrade head
+    ```
+    
+5. Запустите FastAPI-приложение:
     ```bash
     uvicorn app.main:app --reload
     ```
-5. Откройте второе окно терминала, перейдите в директорию бота:
+    
+6. Откройте второе окно терминала, перейдите в директорию бота:
    ```bash
     cd bot
     ```
-6. Запустите телеграм-бота:
+   
+7. Запустите телеграм-бота:
    ```bash
     python bot.py
     ```
