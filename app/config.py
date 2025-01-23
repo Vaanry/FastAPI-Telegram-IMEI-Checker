@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     secret_key: str
     algorithm: str
     token: str
+    api_key: str
 
     class Config:
         env_file = ".env"
